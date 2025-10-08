@@ -1,0 +1,10 @@
+# 依賴項目錄
+/node_modules
+
+# 日誌
+npm-debug.log
+.DS_Store
+
+# 環境變數與機密資料
+.env
+.local.env
