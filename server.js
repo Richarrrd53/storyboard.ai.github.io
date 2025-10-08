@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const fs = require("fs");
-const { marked } = require('marked'); // 已調整為標準的 CommonJS require 語法
+const { marked } = import('marked'); // 已調整為標準的 CommonJS require 語法
 
 const { GoogleGenAI } = require("@google/genai");
 
