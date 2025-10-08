@@ -5,7 +5,7 @@ const app = express();
 const port = 1000; // 您可以更改端口號
 const hostname = '127.0.0.1';
 const fs = require("fs");
-const { marked } = require('marked');
+const { marked } = import('marked');
 
 const { GoogleGenAI } = require("@google/genai");
 
