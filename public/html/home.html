@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Storyboard AI</title>
+    <link rel="stylesheet" href="../css/home.css">
+</head>
+<body>
+    <div id="BG"></div>
+    <div id="mainSection">
+      <h1 id="title1">STORYBOARD <span style="color: #804ac5; text-shadow: 0px 0px 20px #caa1ff;">AI</span></h1>
+      <button id="continueBtn">
+        Get started
+        <div class="hoverEffect" id="continueBtnHover">
+          <div></div>
+        </div>
+      </button>
+      <div id="step1">
+        <h1 id="title2">STEP 1</h1>
+        <p id="content2">請在下方描述故事/場景</p>
+      </div>
+
+      <div id="step2">
+        <button id="backBtn2" class="backBtns">
+          <img src="../icon/back1.svg" alt="" id="back1">
+          <img src="../icon/back2.svg" alt="" id="back2">
+          <div id="backBtnBlank"></div>
+          Back
+        </button>
+        <h1 id="title3">STEP 2</h1>
+        <p id="content3">請選擇想要的風格</p>
+      </div>
+
+      <div id="step3">
+        <button id="backBtn3" class="backBtns">
+          <img src="../icon/back1.svg" alt="" id="back1">
+          <img src="../icon/back2.svg" alt="" id="back2">
+          <div id="backBtnBlank"></div>
+          Back
+        </button>
+        <h1 id="title4">STEP 3</h1>
+        <p id="content4">請選擇畫面比例</p>
+      </div>
+
+      <div id="inputContainer">
+        <div id="g">
+          <button id="historyBtn" class="btnStyle1">H</button>
+          <div id="inputBG">
+            <div id="g">
+              <textarea id="inputText" placeholder="請輸入分鏡描述..."></textarea>
+              <button id="nextBtn" class="btnStyle1">
+                <img src="../icon/send.svg" alt="" id="nextBtnImg">
+              </button>
+            </div>
+          </div>
+          <button id="inputCloseBtn" class="btnStyle1">X</button>
+        </div>
+      </div>
+
+      <div id="stylesContainer">
+        <div id="cardsContainer">
+          <div id="card1" class="cards">
+            <img src="../icon/card/Default.png" alt="" id="cardIcon1" class="cardIcons">
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle1" class="cardTitles">預設風格</p>
+          </div>
+          <div id="card2" class="cards">
+            <img src="../icon/card/realistic.png" alt="" id="cardIcon2" class="cardIcons">
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle2" class="cardTitles">寫實風格</p>
+          </div>
+          <div id="card3" class="cards">
+            <img src="../icon/card/film.png" alt="" id="cardIcon3" class="cardIcons">
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle3" class="cardTitles">電影風格</p>
+          </div>
+          <div id="card4" class="cards">
+            <img src="../icon/card/cartoon.png" alt="" id="cardIcon4" class="cardIcons">
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle4" class="cardTitles">卡通風格</p>
+          </div>
+          <div id="card5" class="cards">
+            <img src="../icon/card/comic.png" alt="" id="cardIcon5" class="cardIcons">
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle5" class="cardTitles">漫畫風格</p>
+          </div>
+          <div id="card6" class="cards">
+            <textarea id="cardInput" placeholder="請輸入自定義風格描述..."></textarea>
+            <div class="hoverTextBG"></div>
+            <p id="cardTitle6" class="cardTitles">自定義</p>
+          </div>
+        </div>
+        <div id="btnsContainer">
+          <button id="preBtn" class="btnStyle2">▴ Previous</button>
+          <button id="nextBtn2" class="btnStyle2">Next ▾</button>
+          <button id="confirmBtn" class="btnStyle2">Confirm</button>
+        </div>
+      </div>
+
+      <div id="ratioContainer">
+        <div id="previewContainer">
+          <div id="preview"></div>
+          <img src="../icon/photo.svg" alt="" id="previewIcon">
+        </div>
+        <button id="rotateBtn">Rotate</button>
+        <div id="ratioOptionContainer">
+          <button class="ratioOptions" id="selectedOption">3:2</button>
+          <button class="ratioOptions">1:1</button>
+          <button class="ratioOptions">16:9</button>
+        </div>
+        <button id="confirmBtn2">Confirm</button>
+      </div>
+      <br>
+      <div id="chatOutput"></div>
+
+      <div id="confirmContainer">
+        <p id="confirmTitle">確認生成嗎？</p>
+        <p id="confirmText1">您輸入的故事為：</p>
+        <div id="confirmText1-1"></div>
+        <p id="confirmText2">您選擇的風格為：</p>
+        <div id="confirmText2-1"></div>
+        <p id="confirmText3">您選擇的比例為：</p>
+        <div id="confirmText3-1"></div>
+        <p id="confirmText4">確認後StoryboardAI將為您生成至少1個畫面的分鏡草稿</p>
+        <div id="confirmBtns">
+          <button class="btnStyle2" id="confirmCan">Cancel</button>
+          <button class="btnStyle2" id="confirmGen">Generate!</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div id="result">
+      <div id="filmStripContainer" class="film-strip-container">
+        <div class="film-strip-controls">
+          <button id="playButton" class="film-strip-button">
+            <img src="../icon/play.svg" alt="" class="film-strip-button-icon">
+            預覽
+          </button>
+          <button id="exportButton" class="film-strip-button">
+            <img src="../icon/export.svg" alt="" class="film-strip-button-icon">
+            匯出(測試版)
+          </button>
+          <button id="continueStoryButton" class="film-strip-button">
+            <img src="../icon/add.svg" alt="" class="film-strip-button-icon">
+            故事接龍(測試版)
+          </button>
+        </div>
+        <div id="filmStrip" class="film-strip">
+          <!-- 膠捲內容將由 JavaScript 動態生成 -->
+        </div>
+      </div>
+      
+      <!-- 模態視窗用於播放模式 -->
+      
+      
+      <!-- 提示詞查看的模態視窗 -->
+      <div id="promptModal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h3>生成提示詞</h3>
+          <p id="promptContent"></p>
+        </div>
+      </div>
+    </div>
+    <div id="playbackBG">
+        
+    </div>
+  <script src="../js/home.js"></script>
+</body>
+</html>

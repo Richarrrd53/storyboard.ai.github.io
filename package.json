@@ -1,0 +1,31 @@
+{
+  "name": "computer-organization",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "description": "",
+  "dependencies": {
+    "@google/genai": "^0.7.0",
+    "@google/generative-ai": "^0.24.0",
+    "body-parser": "^1.20.3",
+    "computer-organization": "file:",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "fs": "^0.0.1-security",
+    "marked": "^15.0.7",
+    "nodemon": "^3.1.9",
+    "openai": "^4.89.0",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "webpack": "^5.98.0",
+    "webpack-cli": "^6.0.1"
+  }
+}
