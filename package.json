@@ -1,11 +1,11 @@
 {
-  "name": "computer-organization",
+  "name": "storyboard-ai-github-io",
   "version": "1.0.0",
-  "description": "��#\u0000 \u0000s\u0000t\u0000o\u0000r\u0000y\u0000b\u0000o\u0000a\u0000r\u0000d\u0000.\u0000a\u0000i\u0000.\u0000g\u0000i\u0000t\u0000h\u0000u\u0000b\u0000.\u0000i\u0000o\u0000\r\u0000 \u0000",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node server.js",
+    "build": "chmod +x node_modules/.bin/webpack && webpack"
   },
   "repository": {
     "type": "git",
@@ -19,12 +19,11 @@
     "url": "https://github.com/Richarrrd53/storyboard.ai.github.io/issues"
   },
   "homepage": "https://github.com/Richarrrd53/storyboard.ai.github.io#readme",
-  "dependencies": {
-    "@google/genai": "^1.22.0",
-    "body-parser": "^2.2.0",
-    "express": "^5.1.0",
-    "fs": "^0.0.1-security",
-    "marked": "^16.4.0",
-    "path": "^0.12.7"
+  "description": "",
+  "devDependencies": {
+    "@babel/core": "^7.28.4",
+    "babel-loader": "^10.0.0",
+    "webpack": "^5.102.1",
+    "webpack-cli": "^6.0.1"
   }
 }
