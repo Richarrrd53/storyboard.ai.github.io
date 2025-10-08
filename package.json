@@ -25,5 +25,13 @@
     "babel-loader": "^10.0.0",
     "webpack": "^5.102.1",
     "webpack-cli": "^6.0.1"
+  },
+  "dependencies": {
+    "@google/genai": "^1.22.0",
+    "body-parser": "^2.2.0",
+    "express": "^5.1.0",
+    "fs": "^0.0.1-security",
+    "marked": "^16.4.0",
+    "path": "^0.12.7"
   }
 }
