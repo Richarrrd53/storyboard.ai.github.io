@@ -12,7 +12,6 @@ const apiKey = process.env.GEMINI_API_KEY;
 if (!apiKey) {
     console.error("FATAL: GEMINI_API_KEY 環境變數未設定。請設定 Vercel 環境變數並重試。");
     // 在 Vercel 環境中，這裡不會真的終止程序，但會是一個良好的錯誤提示
-    // process.exit(1); 
 }
 const genAI = new GoogleGenAI({ apiKey: apiKey });
 // --- API 金鑰安全性調整結束 ---
@@ -39,7 +38,7 @@ app.post('/askGemini', async (req, res) => {
 
         // 模型名稱建議檢查或更新，這裡暫時保留您的設定。
         const response = await genAI.models.generateContent({
-            model: "gemini-2.0-flash-exp-image-generation",
+            model: "gemini-3-pro-image-preview",
             contents: contents,
             config: {
                 responseModalities: ['Text', 'Image']
